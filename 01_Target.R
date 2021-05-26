@@ -21,7 +21,7 @@ newdata <- data %>%
   rename(IDDIST = CODIGO_UBIGEO)
   
 # Population data ---------------------------------------------------------
-ubigeo <- unique(newdata$CODIGO_UBIGEO)
+ubigeo <- unique(newdata$IDDIST)
 region <- st_read('./GPKG/distritos.gpkg') %>% 
   filter(IDDIST %in% ubigeo)
 
